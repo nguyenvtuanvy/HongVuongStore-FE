@@ -1,0 +1,71 @@
+/* src/pages/Category.css */
+.category-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.category-form {
+    margin-bottom: 20px;
+}
+
+.category-form input {
+    padding: 8px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+.category-form button {
+    padding: 8px 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.category-form button:hover {
+    background-color: #45a049;
+}
+
+.message {
+    color: green;
+    margin-top: 10px;
+}
+
+.category-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.category-list th,
+.category-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.category-list th {
+    background-color: #f2f2f2;
+}
+
+.category-list button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.category-list button:hover {
+    background-color: #d32f2f;
+}
+
+.category-list button:first-child {
+    background-color: #2196f3;
+}
+
+.category-list button:first-child:hover {
+    background-color: #1976d2;
+}
