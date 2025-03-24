@@ -1,8 +1,8 @@
 // src/services/categoryApi.js
 import axios from 'axios';
 
-const API_URL = 'https://hongvuong-store-latest.onrender.com/api/v1/categories';
-
+const API_URL = 'https://hongvuongstore-latest.onrender.com/api/v1/categories';
+// const API_TEST_URL = 'http://localhost:8080/api/v1/categories';
 export const getAllCategories = async () => {
     try {
         const response = await axios.get(`${API_URL}/all`);

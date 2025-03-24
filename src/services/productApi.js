@@ -1,11 +1,12 @@
 import axios from 'axios';
 
-const API_URL = 'https://hongvuong-store-latest.onrender.com/api/v1/products'; // Địa chỉ API của Spring Boot
-
+const API_URL = 'https://hongvuongstore-latest.onrender.com/api/v1/products';
+// const API_TEST_URL = 'http://localhost:8080/api/v1/products'; // Địa chỉ API lOCAL
 // Lấy tất cả sản phẩm
 export const getAllProducts = async () => {
     try {
         const response = await axios.get(`${API_URL}/all`);
+        console.log(response);
         return response.data;
     } catch (error) {
         console.error('Error fetching products:', error);

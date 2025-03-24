@@ -8,6 +8,7 @@ import {
     updateProduct,
 } from '../services/productApi';
 import { saveContract } from '../services/contractApi';
+import { getAllCategories } from '../services/categoryApi';
 import axios from 'axios';
 import './Product.css';
 
@@ -26,12 +27,12 @@ const Products = () => {
     const [phoneNumberCustomer, setPhoneNumberCustomer] = useState("");
     const [note, setNote] = useState("");
 
-    // Fetch and sort products by ID
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/api/v1/products/all');
-                setProducts(response.data.sort((a, b) => a.id - b.id));
+                const data = await getAllProducts();
+                console.log(data);
+                setProducts(data.sort((a, b) => a.id - b.id));
             } catch (error) {
                 console.error('Lỗi khi lấy danh sách sản phẩm:', error);
                 setProducts([]);
@@ -44,8 +45,9 @@ const Products = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/api/v1/categories/all');
-                setCategories(response.data);
+                // const response = await axios.get('https://hongvuong-store-latest.onrender.com/api/v1/categories/all');
+                const data = await getAllCategories();
+                setCategories(data);
             } catch (error) {
                 console.error('Lỗi khi lấy danh sách danh mục:', error);
             }
